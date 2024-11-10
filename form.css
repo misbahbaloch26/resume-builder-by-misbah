@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Body and Background */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: whitesmoke;
+    color: #333;
+    
+    margin-top: 5px;
+  }
+  
+  /* Form Container - Glassmorphism */
+  .form-container {
+    background:white;
+    color: #007898;
+    backdrop-filter: blur(10px) saturate(180%); /* Blurred background effect */
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 16px;
+    border: 3px solid #007898;
+    padding: 3rem;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #086c88;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+  
+  h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 0.8rem auto;
+    border-radius: 2px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #16667c;
+    margin: 1rem 0 0.4rem;
+    font-size: 1rem;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #007898;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #007898;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  
+  input:focus, textarea:focus {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+  }
+  
+  button {
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #007898;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  
+  button:hover::after {
+    opacity: 1;
+  }
+  
+  button:hover {
+    transform: scale(1.03);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
